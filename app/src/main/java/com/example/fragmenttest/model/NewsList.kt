@@ -9,6 +9,6 @@ class NewsList {
                 newsSort = 1
             ),
         )
-        
+
     }
 }
