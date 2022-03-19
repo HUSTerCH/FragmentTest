@@ -11,17 +11,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val button1 : Button = findViewById(R.id.button1)
-        button1.setOnClickListener {
-            replaceFragment(RightFragment())
-        }
-    }
-
-    fun replaceFragment(fragment: Fragment) {
-        val fragmentManager = supportFragmentManager
-        val transaction = fragmentManager.beginTransaction()
-        transaction.replace(R.id.leftFrag,fragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
     }
 }

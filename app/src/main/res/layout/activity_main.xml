@@ -5,11 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.MainActivity">
-
-    <fragment
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/leftFrag"
-        android:name="com.example.fragmenttest.view.LeftFragment" />
+<fragment
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_page"
+    android:name="com.example.fragmenttest.view.MainPage"/>
 
 </LinearLayout>

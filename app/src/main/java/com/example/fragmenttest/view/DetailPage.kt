@@ -7,12 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.fragmenttest.R
 
-class RightFragment :Fragment() {
+class DetailPage:Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.right_fragment, container, false)
+        return inflater.inflate(R.layout.news_detail,container,false)
     }
 }
