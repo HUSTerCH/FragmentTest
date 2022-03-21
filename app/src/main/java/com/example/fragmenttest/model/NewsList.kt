@@ -1,6 +1,5 @@
 package com.example.fragmenttest.model
 
-class NewsList {
     fun newsList() :List<News> {
         return listOf(
             News(
@@ -11,4 +10,3 @@ class NewsList {
         )
 
     }
-}

@@ -1,5 +1,8 @@
 package com.example.fragmenttest.viewModel
 
+import android.content.ContentValues.TAG
+import android.nfc.Tag
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,6 +21,7 @@ class NewsAdapter(private val onClick:(News) -> Unit):
             private val newsContent:TextView = itemView.findViewById(R.id.news_content_view)
             private var currentNews:News ? = null
             init {
+                Log.e(TAG,"错误")
                 itemView.setOnClickListener {
                     currentNews?.let {
                         onClick(it)
@@ -25,6 +29,7 @@ class NewsAdapter(private val onClick:(News) -> Unit):
                 }
             }
             fun bind(news: News) {
+                Log.e(TAG,"错误")
                 currentNews = news
                 newsTitle.text = news.newsTitle
                 newsContent.text = news.newsContent
@@ -38,6 +43,7 @@ class NewsAdapter(private val onClick:(News) -> Unit):
 
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
         val news = getItem(position)
+        Log.e(TAG,"错误")
         holder.bind(news)
     }
 }

@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 
 class Data {
-    private val newsList = NewsList()
+    private val newsList = newsList()
     private val newsLiveData = MutableLiveData(newsList)
 
     fun addUser() {
@@ -13,7 +13,7 @@ class Data {
     fun delete() {
 
     }
-    fun getNews() : LiveData<NewsList> {
+    fun getNews() : LiveData<List<News>> {
         return newsLiveData
     }
     companion object {
