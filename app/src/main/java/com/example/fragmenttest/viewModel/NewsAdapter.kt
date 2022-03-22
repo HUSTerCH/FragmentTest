@@ -1,7 +1,6 @@
 package com.example.fragmenttest.viewModel
 
 import android.content.ContentValues.TAG
-import android.nfc.Tag
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -41,8 +40,11 @@ class NewsAdapter(private val onClick:(News) -> Unit):
 
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
         val news = getItem(position)
-        Log.e(TAG,"错误")
         holder.bind(news)
+    }
+
+    override fun getItemCount(): Int {
+        return super.getItemCount()
     }
 }
 object NewsDiffCallback : DiffUtil.ItemCallback<News>() {

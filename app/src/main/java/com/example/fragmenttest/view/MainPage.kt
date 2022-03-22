@@ -1,5 +1,7 @@
 package com.example.fragmenttest.view
+import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,9 +13,11 @@ import com.example.fragmenttest.model.News
 import com.example.fragmenttest.viewModel.MainViewModel
 import com.example.fragmenttest.viewModel.MainViewModelFactory
 import com.example.fragmenttest.viewModel.NewsAdapter
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.news_detail.*
 
 class MainPage:Fragment() {
-    var isTwoPane = false
+    private var isTwoPane = true
     private val mainViewModel by activityViewModels<MainViewModel> {
         MainViewModelFactory()
     }
@@ -36,9 +40,15 @@ class MainPage:Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        isTwoPane = activity?.findViewById<View>(R.id.detail_page) != null
+        isTwoPane = activity?.findViewById<View>(R.id.fragment_news_detail_page) != null
+        Log.e(TAG,isTwoPane.toString())
     }
     fun onClick(news: News) {
-
+        if (isTwoPane) {
+            val fragment = fragment_news_detail_page as DetailPage
+            fragment.refresh(news.newsTitle,news.newsContent)
+        } else {
+            DetailActivity.actionStart(requireContext(),news.newsTitle,news.newsContent)
+        }
     }
 }

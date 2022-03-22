@@ -9,7 +9,6 @@ import java.lang.IllegalArgumentException
 
 class MainViewModel(val data: Data) : ViewModel() {
     val newsData = data.getNews()
-
 }
 
 class MainViewModelFactory(): ViewModelProvider.Factory {

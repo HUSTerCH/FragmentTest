@@ -26,7 +26,7 @@ class DetailActivity:AppCompatActivity() {
         val title = intent.getStringExtra("news_title")
         val content = intent.getStringExtra("news_detail")
         if (title != null && content != null) {
-            val fragment = news_content_view as DetailPage
+            val fragment = newsDetail as DetailPage
             fragment.refresh(title,content)
         }
     }
