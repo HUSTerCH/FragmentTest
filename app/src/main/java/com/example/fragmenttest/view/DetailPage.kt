@@ -14,7 +14,7 @@ class DetailPage:Fragment() {
     }
     fun refresh(title:String,content:String) {
         detail_page_frag.visibility = View.VISIBLE
-        news_content.text = title
-        news_title.text = content
+        news_content.text = content
+        news_title.text = title
     }
 }

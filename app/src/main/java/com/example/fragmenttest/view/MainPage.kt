@@ -14,7 +14,6 @@ import com.example.fragmenttest.viewModel.MainViewModel
 import com.example.fragmenttest.viewModel.MainViewModelFactory
 import com.example.fragmenttest.viewModel.NewsAdapter
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.news_detail.*
 
 class MainPage:Fragment() {
     private var isTwoPane = true
