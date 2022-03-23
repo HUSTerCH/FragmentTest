@@ -1,11 +1,8 @@
 package com.example.fragmenttest.view
 
-import android.content.ContentValues
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.viewModels
-import androidx.fragment.app.activityViewModels
+import androidx.appcompat.app.AppCompatActivity
 import com.example.fragmenttest.R
 import com.example.fragmenttest.viewModel.MainViewModel
 import com.example.fragmenttest.viewModel.MainViewModelFactory
