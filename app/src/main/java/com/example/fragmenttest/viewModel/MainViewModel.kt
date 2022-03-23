@@ -1,10 +1,8 @@
 package com.example.fragmenttest.viewModel
 
-import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.fragmenttest.model.Data
-import com.example.fragmenttest.view.MainPage
 import java.lang.IllegalArgumentException
 
 class MainViewModel(val data: Data) : ViewModel() {
